@@ -1,14 +1,13 @@
-import { HeaderCom } from "./components/HeaderCom";
-import { LearnComponent } from "./components/LearnComponent";
-import { MapMethod } from "./components/MapMethod";
+import { Student } from "./components/Student";
 
 function App() {
   return (
     <>
-      <div>Harishanth</div>
+      {/* <div>Harishanth</div>
       <LearnComponent/>
       <HeaderCom />
-      <MapMethod/>
+      <MapMethod/> */}
+      <Student  />
     </>
   );
 }
