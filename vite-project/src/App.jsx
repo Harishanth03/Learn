@@ -1,4 +1,11 @@
+import { ChildComponent } from "./components/ChildComponent";
 import { Student } from "./components/Student";
+
+const items = [
+  {id: 1 , name: "item 1"},
+  {id: 2 , name: "item 2"},
+  {id: 3 , name: "item 3"}
+]
 
 function App() {
   return (
@@ -7,7 +14,12 @@ function App() {
       <LearnComponent/>
       <HeaderCom />
       <MapMethod/> */}
-      <Student  />
+      {/* <Student  />
+      <ChildComponent>
+        <p>This is harishanth</p>
+        <p>This is Here</p>
+      </ChildComponent> */}
+
     </>
   );
 }
