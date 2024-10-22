@@ -1,3 +1,4 @@
+import { ArraySample } from "./components/ArraySample";
 import { ChildComponent } from "./components/ChildComponent";
 import { Student } from "./components/Student";
 
@@ -19,6 +20,7 @@ function App() {
         <p>This is harishanth</p>
         <p>This is Here</p>
       </ChildComponent> */}
+      <ArraySample  items = {items}/>
 
     </>
   );
