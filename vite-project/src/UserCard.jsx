@@ -2,8 +2,8 @@ function User(props)
 {
     return (
         <div className="cart-container">
-            <span className="pro">Online</span>
-            <img className="img" src="../public/images/vijay.jpg" alt="user" />
+            <span className={props.online ? "pro online" : "pro offline"}>{props.online? "Online" : "Offline"}</span>
+            <img className="img" src={props.image} alt="user" />
             <h3>{props.name}</h3>
             <h3>{props.place}</h3>
             <p>{props.job}</p>
@@ -14,13 +14,9 @@ function User(props)
             <div className="skills">
                 <h6>Skills</h6>
                 <ul>
-                    <li>UiUx</li>
-                    <li>FrontEnd</li>
-                    <li>HTML</li>
-                    <li>Css</li>
-                    <li>ReactJs</li>
-                    <li>javaScript</li>
-                    <li>Node</li>
+                    {props.skills.map((skills , index) => (
+                        <li key={index}>{skills}</li>
+                    ))}
                 </ul>
             </div>
         </div>
@@ -30,7 +26,63 @@ function User(props)
 export const UserCard = () => {
   return (
     <>
-        <User name = "Thalapathy" place = "India" job = "Actor" />
+        {
+            userData.map((data , index) => (<User key={index} 
+            name = {data.name}
+            city = {data.city}
+            job = {data.Job}
+            skills = {data.Skills}
+            online = {data.online}
+            image = {data.image}
+            />))
+        }
     </>
   )
 }
+
+// <User name = "Thalapathy" place = "India" job = "Actor" skills = {["Acting" , "Dancing" , "Singing"]} online = {true} image = "../public/images/vijay.jpg"/>
+
+const userData = [
+    {
+        name : 'Thalapathy Vijay',
+
+        city : "Chennai",
+
+        Job : "Actor",
+
+        Skills : ["Acting" , "Dancing" , "Singing"],
+
+        online : true,
+
+        image : "../public/images/vijay.jpg"
+    },
+
+    {
+        name : 'Siva Karthikeyan',
+
+        city : "Chennai",
+
+        Job : "Actor",
+
+        Skills : ["Acting" , "Dancing" , "Singing", "Writing" , "Director"],
+
+        online : false,
+
+        image : "../public/images/sk.jpg"
+    },
+
+    {
+        name : 'Vijay Sethupathy',
+
+        city : "Chennai",
+
+        Job : "Actor",
+
+        Skills : ["Acting" , "Host" , "Singing"],
+
+        online : true,
+
+        image : "../public/images/vjs.jpg"
+    },
+
+]
