@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function User(props)
 {
     return (
@@ -29,7 +31,7 @@ export const UserCard = () => {
         {
             userData.map((data , index) => (<User key={index} 
             name = {data.name}
-            city = {data.city}
+            place = {data.city}
             job = {data.Job}
             skills = {data.Skills}
             online = {data.online}
@@ -86,3 +88,13 @@ const userData = [
     },
 
 ]
+User.prototypes = 
+{
+    name: PropTypes.string.isRequired,
+    place: PropTypes.string.isRequired,
+    job: PropTypes.string.isRequired,
+    skills: PropTypes.arrayOf(PropTypes.string).isRequired,
+    online: PropTypes.bool.isRequired,
+    image: PropTypes.string.isRequired
+
+}
