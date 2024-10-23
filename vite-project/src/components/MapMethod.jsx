@@ -1,7 +1,9 @@
 import React from 'react'
 
 export const MapMethod = () => {
-    const arrayList = ['Home' , 'About me', 'Contact Us', 'Login' , 'fun']
+
+    const arrayList = ['Home' , 'About me', 'Contact Us', 'Login' , 'fun'];
+    
   return (
     <>
         <ul>
