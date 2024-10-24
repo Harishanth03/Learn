@@ -4,7 +4,7 @@ export const Cart = () => {
 
   const [cartCount , setCartCount] = useState(0);
 
-  let handleClick = () => (setCartCount(cartCount + 1))
+  let handleClick = () => setCartCount(cartCount + 1)
   return (
 
     <>
