@@ -54,7 +54,7 @@ const userData = [
 
         Skills : ["Acting" , "Dancing" , "Singing"],
 
-        online : true,
+        online : true, 
 
         image : "../public/images/vijay.jpg"
     },
