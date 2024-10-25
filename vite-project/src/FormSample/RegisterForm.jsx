@@ -14,7 +14,9 @@ export const RegisterForm = () =>
 
         isMarried : false,
 
+        country : "Sri Lanka",
 
+        bio : "Hey its harishanth"
     });
 
     function changeHandler (e)
@@ -66,6 +68,22 @@ export const RegisterForm = () =>
 
                     </tr>
 
+                    <tr>
+
+                        <td>Country</td>
+
+                        <td>{user.country}</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Bio</td>
+
+                        <td>{user.bio}</td>
+
+                    </tr>
+
                 </tbody>
 
             </table>
@@ -99,6 +117,28 @@ export const RegisterForm = () =>
                     <input type="checkbox" checked = {user.isMarried == true} value={user.isMarried} id="isMarried"  name="isMarried" onChange={changeHandler}/> is Married
                     
                 </label>
+
+                <div className="select-div">
+
+                    <label htmlFor="selectCountry">Select Country</label>
+
+                    <select name="country" id="selectcounty" value={user.country} onChange={changeHandler}>
+
+                        <option value="India">India</option>
+
+                        <option value="America">America</option>
+
+                        <option value="Sri Lanka">Sri Lanka</option>
+
+                        <option value="United Kingdom">United Kingdom</option>
+
+                        <option value="Canada">Canada</option>
+
+                    </select>
+
+                </div>
+
+                <textarea name="bio" cols="30" rows="5" value={user.bio} placeholder="Enter your details" onChange={changeHandler}></textarea>
 
             </form>
             
