@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RegisterForm } from './FormSample/RegisterForm'
+import { Counter } from './Exersice/Counter'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-    <RegisterForm/>
+    <Counter/>
     
   </StrictMode>,
 )
