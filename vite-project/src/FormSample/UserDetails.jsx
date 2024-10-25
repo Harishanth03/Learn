@@ -2,19 +2,19 @@ import { useState } from "react"
 
 export const UserDetails = () => {
 
-    const [userName , setUserName] = useState("Ram");
+    const [userName , setUserName] = useState({name : "Ram" , age : 22});
 
     const [age , setAge] = useState(22);
 
-    const updateUserName = () =>{userName == "Ram" ? setUserName("Hari") : setUserName("Ram")};
+    const updateUserName = () =>{setUserName({...userName, name : "Harishanth"})};
 
-    const updateUserAge = () => {setAge(24)};
+    const updateUserAge = () => {setUserName({...userName, age : 24})};
   return (
 
     <>
-        <h1>User Details: {userName} </h1>
+        <h1>User Details: {userName.name} </h1>
 
-        <h1>Age: {age} </h1>
+        <h1>Age: {userName.age} </h1>
 
         <button onClick={updateUserName}>Update User Name</button>
 
