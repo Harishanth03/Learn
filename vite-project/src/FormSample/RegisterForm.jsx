@@ -15,7 +15,16 @@ export const RegisterForm = () =>
         isMarried : false,
 
 
-    })
+    });
+
+    function changeHandler (e)
+    {
+        const name = e.target.name;
+        
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+
+        SetUser({...user, [name] : value})
+    }
 
     return(
 
@@ -57,14 +66,6 @@ export const RegisterForm = () =>
 
                     </tr>
 
-                    <tr>
-
-                        <td>Name</td>
-
-                        <td>Harishanth</td>
-
-                    </tr>
-
                 </tbody>
 
             </table>
@@ -72,22 +73,22 @@ export const RegisterForm = () =>
 
             <form >
 
-                <input type="text" placeholder="fullName" value={user.name} />
+                <input type="text" placeholder="fullName" value={user.name}   name="name" onChange={changeHandler}/>
 
-                <input type="number" placeholder="age" value={user.age}  />
+                <input type="number" placeholder="age" value={user.age}  name="age" onChange={changeHandler}/>
 
                 <div className="gender">
 
-                    <label htmlFor="male">
+                    <label htmlFor="Male">
 
-                        <input name="gender" type="radio" id="Male" checked = {user.gender == "Male"} value={user.gender} /> Male
+                        <input name="gender" type="radio" id="Male" checked = {user.gender == "Male"} value="Male" onChange={changeHandler}/> Male
 
                     </label>
 
 
-                    <label htmlFor="female">
+                    <label htmlFor="Female">
 
-                        <input name="gender" type="radio" checked =  {user.gender == "Female"} value={user.gender} id="Female" /> Female
+                        <input name="gender" type="radio" checked =  {user.gender == "Female"} value="Female" id="Female" onChange={changeHandler}/> Female
 
                     </label>
 
@@ -95,7 +96,7 @@ export const RegisterForm = () =>
 
                 <label htmlFor="isMarried">
 
-                    <input type="checkbox" checked = {user.isMarried == true} value={user.isMarried} id="isMarried"/> is Married
+                    <input type="checkbox" checked = {user.isMarried == true} value={user.isMarried} id="isMarried"  name="isMarried" onChange={changeHandler}/> is Married
                     
                 </label>
 
