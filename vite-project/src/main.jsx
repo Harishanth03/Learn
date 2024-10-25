@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Cart } from './FormSample/Cart'
-import { UserDetails } from './FormSample/UserDetails'
+import { UserForm } from './FormSample/UserForm'
+
 
 // import App from './App.jsx'
 // import './index.css'
@@ -10,6 +10,6 @@ import { UserDetails } from './FormSample/UserDetails'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <UserDetails/>
+    <UserForm/>
   </StrictMode>,
 )
