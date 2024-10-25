@@ -27,6 +27,7 @@ div button
     background-color: white;
     padding: 10px 25px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 div h3
